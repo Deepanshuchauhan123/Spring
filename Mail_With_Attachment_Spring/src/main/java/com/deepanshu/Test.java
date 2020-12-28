@@ -12,7 +12,7 @@ public class Test {
 		MailMail m=(MailMail)context.getBean("mailMail");
 		String sender="sender@gmail.com";
 		String reciever="reciever@gmail.com";
-		m.sendMail(sender, reciever, "Testing MAil in SPring", "We are testing mail in spring");
+		m.sendMail(sender, reciever, "Testing Mail in Spring", "We are testing mail in spring");
 		System.out.print("Success");
 	}
 }
