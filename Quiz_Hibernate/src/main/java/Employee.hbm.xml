@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 30, 2020 10:45:52 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.deepanshu.DemoHib.Question" table="q100">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="qname">
+            <column name="Questions" />
+        </property>
+       <list name="answers" table="ans100">
+       	<key column="qid"></key>
+       	<index column="type"></index>
+       	<element column="answer" type="string"></element>
+       </list>
+    </class>
+</hibernate-mapping>
